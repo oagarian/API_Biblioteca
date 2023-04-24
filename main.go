@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-  "github.com/gofiber/fiber/v2"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func handler(ctx *fiber.Ctx) error {
@@ -10,6 +11,13 @@ func handler(ctx *fiber.Ctx) error {
   return nil
 }
 
+//Functions 
+func registerBook(c fiber.Ctx) error {
+  return nil
+}
+
 func main() {
-	fmt.Println("Hello, World!")
+	app := fiber.New
+  app.Get("/", handler)
+  app.Listen(":8080")
 }
